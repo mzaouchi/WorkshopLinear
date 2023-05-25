@@ -1,0 +1,20 @@
+PROCEDURE Somme(a,b:INTEGER,VAR c : INTEGER)
+ 
+BEGIN
+    c := a+b
+END
+
+ALGORITHM CalculSomme
+VAR
+    x,y : INTEGER;
+    kes : INTEGER;
+BEGIN
+    Write("Donner un entier");
+    Read(x);
+    Write("Donner un entier");
+    Read(y);
+
+    Somme(x,y,kes)
+
+    Write(kes)
+END

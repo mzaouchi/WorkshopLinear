@@ -1,0 +1,32 @@
+ALGORITHM CommunDistinct
+VAR
+    T : ARRAY_OF INTEGER[] := [3,1,7,9];
+    V : ARRAY_OF INTEGER[] := [2,4,1,9,3];
+    sum : INTEGER := 0;
+    sumTotal : INTEGER := 0
+    i,j : INTEGER := 1;
+BEGIN
+    FOR i FROM 1 TO T.length STEP 1 DO
+        sumTotal := sumTotal + T[i]
+    END_FOR
+
+    FOR i FROM 1 TO V.length STEP 1 DO
+        sumTotal := sumTotal + V[i]
+    END_FOR
+
+
+    FOR i FROM 1 TO T.length STEP 1  DO
+        
+        
+        FOR j FROM 1 TO V.length STEP 1  DO
+            IF (T[i] = V[j]) THEN
+                sum := sum + T[i]*2
+            END_IF
+        END_FOR
+
+
+    END_FOR
+
+
+    Write(sumTotal-sum)
+END

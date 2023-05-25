@@ -1,0 +1,22 @@
+FUNCTION Somme(a,b : INTEGER) : INTEGER
+VAR
+    res :INTEGER := 0;
+BEGIN
+    res := a+b;
+    RETURN res ;
+END
+
+ALGORITHM CalculSomme
+VAR
+    x,y : INTEGER;
+    kes : INTEGER;
+BEGIN
+    Write("Donner un entier");
+    Read(x);
+    Write("Donner un entier");
+    Read(y);
+
+    kes := Somme(x,y);
+
+    Write("La somme des deux entiers est : ",kes)
+END
